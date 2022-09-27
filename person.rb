@@ -1,4 +1,5 @@
-class Person
+require './nameable.rb'
+class Person < Nameable
   attr_reader :id, :name, :age
 
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -16,5 +17,9 @@ class Person
     of_age? || parent_permission
   end
 
-  private :is_of_age?
+  def correct_name
+    @name
+  end
+
+  private :of_age?
 end
