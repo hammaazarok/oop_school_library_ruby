@@ -14,7 +14,6 @@ class Person < Nameable
   def rentals_list(rental)
     @rentals.push(rental)
     rental.person = self
-
   end
 
   def of_age?
