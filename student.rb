@@ -4,7 +4,7 @@ class Student < Person
     super(age, name, parent_permission)
     @classroom = classroom
   end
-  
+
   def class(clssroom)
     @classroom = classroom
     clssroom.students_list.push(self) unless clssroom.students_list.include?(self)
