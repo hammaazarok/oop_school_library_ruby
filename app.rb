@@ -62,13 +62,12 @@ class App
     rentals_list = @rents.select { |rental| rental.person.id == p_id }
     if rentals_list.empty?
       puts 'No rentals found for this person.'
-      run
     else
       rentals_list.each do |rental|
         puts "Date: #{rental.date}, Book:\"#{rental.book.title}\" by #{rental.book.author}"
       end
-      run
     end
+    run
   end
 
   def make_list_all_books
@@ -98,7 +97,7 @@ class App
   end
 
   def permission(letter)
-    letter.upcase == 'N' ? false : true
+    (letter.upcase != 'N')
   end
 
   def create_student
@@ -108,7 +107,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     agree = gets.chomp
-    student = Student.new(age, nil , name, permission(agree))
+    student = Student.new(age, nil, name, permission(agree))
     @people.push(student)
     print @people
   end
