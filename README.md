@@ -1,4 +1,5 @@
-# oop_school_library_ruby
+# OOP School library Ruby
+
 Practice OOP by building a school library app. Classes are implemented to represent parents, students and teachers.
 
 ## Getting Started
