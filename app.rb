@@ -43,7 +43,7 @@ class App
   end
 
   def list_all_books
-    @books.each_with_index do |book, idx|
+    @books.each_with_index do |book, idx+1|
       puts "#{idx} Title: \"#{book.title}\", Author: #{book.author}"
     end
   end
